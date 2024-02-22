@@ -32,6 +32,7 @@ resetBtn.addEventListener("click", (e) => {
 
 opKeys.forEach((op) => {
   op.addEventListener("click", (e) => {
+    if (operator) return;
     operator = op.textContent
     result.textContent += ` ${op.textContent} `
   })
