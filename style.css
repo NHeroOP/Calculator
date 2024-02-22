@@ -14,9 +14,9 @@ body {
   font-family: "League Spartan", sans-serif;
 }
 
-main {
+/* main {
   
-}
+} */
 
 .screen {
   display: flex;
@@ -54,6 +54,8 @@ main {
   border: 2px solid black;
   border-radius: 0.5rem;
   background-color: hsl(0, 0%, 100%);
+
+  cursor: pointer;
 }
 
 .reset, .equals {
