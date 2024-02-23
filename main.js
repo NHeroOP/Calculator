@@ -4,9 +4,38 @@ const opKeys = document.querySelectorAll(".operator")
 const delBtn = document.querySelector(".del")
 const resetBtn = document.querySelector(".reset")
 const equalsBtn = document.querySelector(".equals")
+const colorThemes = document.querySelectorAll("[name='theme']")
 
 let operator;
 
+// Local Storage
+const storeTheme = (theme) => {
+  localStorage.setItem("theme", theme)
+}
+
+const setTheme = () => {
+  const activeTheme = localStorage.getItem("theme");
+  colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme) {
+      themeOption.checked = true;
+    }
+  });
+
+  document.documentElement.className = activeTheme
+}
+
+colorThemes.forEach((themeOption) => {
+  themeOption.addEventListener("click", () => {
+    storeTheme(themeOption.id);
+
+    document.documentElement.className = themeOption.id
+  })
+})
+
+document.onload = setTheme()
+
+
+// Calculator
 numKeys.forEach((numKey) => {
   numKey.addEventListener("click", (e) => {
     if(result.textContent.length == 1 && result.textContent == "0"){
