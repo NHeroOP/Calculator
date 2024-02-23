@@ -12,28 +12,52 @@
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
+  <header>
+    <p>calc</p>
+    <form class="color-picker" action="">
+      <legend>THEME</legend>
+
+      <fieldset>
+        <fieldset class="themes">
+          <label for="blue">1</label>
+          <input type="radio" id="blue" name="theme" checked>
+        </fieldset>
+    
+        <fieldset class="themes">
+          <label for="light">2</label>
+          <input type="radio" id="light" name="theme">
+        </fieldset>
+
+        <fieldset class="themes">
+          <label for="purple">3</label>
+          <input type="radio" id="purple" name="theme">
+        </fieldset>
+      </fieldset>
+    </form>
+  </header>
+
   <main>
     <div class="screen">
       <p class="result">0</p>
     </div>
-    <div class="keys">
-        <div role="button" class="key num">7</div>
-        <div role="button" class="key num">8</div>
-        <div role="button" class="key num">9</div>
-        <div role="button" class="key del">DEL</div>
-        <div role="button" class="key num">4</div>
-        <div role="button" class="key num">5</div>
-        <div role="button" class="key num">6</div>
+    <div class="keypad">
+        <div role="button" class="key numKey">7</div>
+        <div role="button" class="key numKey">8</div>
+        <div role="button" class="key numKey">9</div>
+        <div role="button" class="key del txtKey">DEL</div>
+        <div role="button" class="key numKey">4</div>
+        <div role="button" class="key numKey">5</div>
+        <div role="button" class="key numKey">6</div>
         <div role="button" class="key operator">+</div>
-        <div role="button" class="key num">1</div>
-        <div role="button" class="key num">2</div>
-        <div role="button" class="key num">3</div>
+        <div role="button" class="key numKey">1</div>
+        <div role="button" class="key numKey">2</div>
+        <div role="button" class="key numKey">3</div>
         <div role="button" class="key operator">-</div>
-        <div role="button" class="key num">.</div>
-        <div role="button" class="key num">0</div>
+        <div role="button" class="key numKey">.</div>
+        <div role="button" class="key numKey">0</div>
         <div role="button" class="key operator">/</div>
         <div role="button" class="key operator">x</div>
-        <div role="button" class="key reset">RESET</div>
+        <div role="button" class="key reset txtKey">RESET</div>
         <div role="button" class="key equals">=</div>
     </div>
   </main>
