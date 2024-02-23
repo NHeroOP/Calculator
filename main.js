@@ -1,5 +1,5 @@
 const result = document.querySelector(".result")
-const numKeys = document.querySelectorAll(".num")
+const numKeys = document.querySelectorAll(".numKey")
 const opKeys = document.querySelectorAll(".operator")
 const delBtn = document.querySelector(".del")
 const resetBtn = document.querySelector(".reset")
