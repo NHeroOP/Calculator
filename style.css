@@ -2,17 +2,18 @@
   --clr-bg-main: hsl(222, 26%, 31%);
   --clr-bg-keypad: hsl(223, 31%, 20%);
   --clr-bg-screen: hsl(224, 36%, 15%);
-  
+
   --clr-bg-key: hsl(30, 25%, 89%);
   --clr-shadow-key: hsl(28, 16%, 65%);
-
+  
   --clr-bg-txtKey: hsl(225, 21%, 49%);
   --clr-shadow-txtKey: hsl(224, 28%, 35%);
 
+  --clr-equalKey: hsl(0, 0%, 100%);
   --clr-bg-equalKey: hsl(6, 63%, 50%);
   --clr-shadow-equalKey: hsl(6, 70%, 34%);
-
-  --clr-white: hsl(0, 0%, 100%);
+  
+  --clr-screen: hsl(0, 0%, 100%);
   --clr-key: hsl(221, 14%, 31%); 
 }
 
@@ -44,7 +45,7 @@ header {
   width: 408px;
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: hsl(0, 0%, 100%);
+  color: var(--clr-screen);
 }
 
 form {
@@ -85,7 +86,7 @@ fieldset {
   height: 5rem;
   margin-bottom: 1rem;
 
-  color: var(--clr-white);
+  color: var(--clr-screen);
   border-radius: 0.5rem;
   background-color: var(--clr-bg-screen);
 }
@@ -129,11 +130,11 @@ fieldset {
 }
 
 .txtKey, .equals {
-  color: var(--clr-white);
   font-size: 1.5rem;
 }
 
 .txtKey {
+  color: white;
   background-color: var(--clr-bg-txtKey);
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-txtKey);
 }
@@ -144,6 +145,7 @@ fieldset {
 }
 
 .equals {
+  color: var(--clr-equalKey);
   background-color: var(--clr-bg-equalKey);
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-equalKey);
 }
@@ -167,7 +169,7 @@ fieldset {
   --clr-bg-equalKey: hsl(25, 98%, 40%);
   --clr-shadow-equalKey: hsl(25, 97%, 27%);
 
-  --clr-white: hsl(0, 0%, 100%);
+  --clr-screen: hsl(60, 10%, 19%);
   --clr-key: hsl(60, 10%, 19%); 
 }
 
@@ -182,11 +184,10 @@ fieldset {
   --clr-bg-txtKey: hsl(281, 89%, 26%);
   --clr-shadow-txtKey: hsl(285, 91%, 52%);
 
+  --clr-equalKey: hsl(0, 0%, 0%);
   --clr-bg-equalKey: hsl(176, 100%, 44%);
   --clr-shadow-equalKey: hsl(177, 92%, 70%);
 
-  --clr-white: hsl(0, 0%, 100%);
+  --clr-screen: hsl(52, 100%, 62%);
   --clr-key: hsl(52, 100%, 62%); 
-
-  --clr-toggle: 
 }
