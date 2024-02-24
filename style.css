@@ -153,10 +153,6 @@ h1 {
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-key);
 }
 
-/* .key:hover {
-  background-color: hsl(30, 25%, 95%);
-} */
-
 .reset, .equals {
   grid-column: span 2;
 }
@@ -167,21 +163,27 @@ h1 {
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-txtKey);
 }
 
-/* .txtKey:hover {
-  transition: background-color 0.2s ease-in-out;
-  background-color: hsl(225, 21%, 55%);
-} */
-
 .equals {
   color: var(--clr-equalKey);
   background-color: var(--clr-bg-equalKey);
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-equalKey);
 }
 
-/* .equals:hover {
+.key:hover {
   transition: background-color 0.2s ease-in-out;
-  background-color: hsl(6, 63%, 56%);
-} */
+  filter: brightness(125%);
+}
+
+.txtKey:hover {
+  transition: background-color 0.2s ease-in-out;
+  filter: brightness(125%);
+}
+
+.equals:hover {
+  transition: background-color 0.2s ease-in-out;
+  filter: brightness(125%);
+}
+
 
 #light, :root:has(#light:checked) {
   --clr-bg-main: hsl(0, 0%, 90%);
