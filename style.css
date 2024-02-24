@@ -25,6 +25,10 @@ body, header,
 }
 
 /*  */
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
 
 html, body {
   height: 100%;
@@ -72,7 +76,7 @@ legend {
   margin-bottom: 0.25rem;
 }
 
-.title {
+h1 {
   font-size: 1.75rem;
 }
 
