@@ -91,8 +91,7 @@ equalsBtn.addEventListener("click", (e) => {
 
   const [n1, n2] = result.textContent.split(` ${operator} `)
   const ans = calc(operator, n1, n2)
-  result.textContent = Math.round((ans + Number.EPSILON) * 100) / 100
-  console.log(result.textContent);
+  result.textContent = ans;
 
   operator = undefined
 })
