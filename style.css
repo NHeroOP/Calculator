@@ -17,6 +17,15 @@
   --clr-key: hsl(221, 14%, 31%); 
 }
 
+/* display: flex */
+body, header, 
+.themes-input, .themes-label,
+.color-picker, .screen, .key {
+  display: flex;
+}
+
+/*  */
+
 html, body {
   height: 100%;
 }
@@ -27,41 +36,56 @@ html, body {
   padding: 0;
 }
 
+
 body {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.25rem;
   background-color: var(--clr-bg-main);
   font-family: "League Spartan", sans-serif;
 }
 
+.container {
+  margin-inline: 2rem;
+}
+
+ /* HEADER */
+
 header {
-  display: flex;
   justify-content: space-between;
-  width: 408px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  align-items: flex-end;
+  
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
   color: var(--clr-screen);
 }
 
-form {
-  display: flex;
+.color-picker {
   gap: 1rem;
 }
 
-fieldset {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+legend {
+  align-self: flex-end;
+  margin-bottom: 0.25rem;
 }
 
-.themes {
-  flex-direction: column;
+.title {
+  font-size: 1.75rem;
+}
 
+.themes-label {
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.themes-input {
+  gap: 0.25em;
+  padding: 0.25rem;
+  border-radius: 1rem;
   background-color: var(--clr-bg-keypad);
 }
 
@@ -75,15 +99,18 @@ fieldset {
 
 .color-picker input[type="radio"]:checked {
   background-color: var(--clr-bg-equalKey);
-  transition: background-color 0.2s linear;
+  transition: background-color 0.5s linear;
 }
 
+/* Screen */
+
 .screen {
-  display: flex;
   justify-content: right;
   align-items: center;
 
-  height: 5rem;
+  overflow: auto;
+  font-size: 2.5rem;
+  min-height: 6rem;
   margin-bottom: 1rem;
 
   color: var(--clr-screen);
@@ -95,10 +122,12 @@ fieldset {
   margin-right: 1rem;
 }
 
+/* Keys  */
+
 .keypad {
   display: grid;
-  grid-template-rows: repeat(5, 3rem);
-  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: repeat(5, minmax(auto, 3rem));
+  grid-template-columns: repeat(4, minmax(auto, 5rem));
   gap: 1rem;
 
   padding: 1.25rem;
@@ -107,7 +136,6 @@ fieldset {
 }
 
 .key {
-  display: flex;
   justify-content: center;
   align-items: center;
   
@@ -116,6 +144,7 @@ fieldset {
 }
 
 .numKey, .operator {
+  font-size: 2rem;
   color: var(--clr-key);
   background-color: var(--clr-bg-key);
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-key);
@@ -129,20 +158,16 @@ fieldset {
   grid-column: span 2;
 }
 
-.txtKey, .equals {
-  font-size: 1.5rem;
-}
-
 .txtKey {
   color: white;
   background-color: var(--clr-bg-txtKey);
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-txtKey);
 }
 
-.txtKey:hover {
+/* .txtKey:hover {
   transition: background-color 0.2s ease-in-out;
   background-color: hsl(225, 21%, 55%);
-}
+} */
 
 .equals {
   color: var(--clr-equalKey);
@@ -150,10 +175,10 @@ fieldset {
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-equalKey);
 }
 
-.equals:hover {
+/* .equals:hover {
   transition: background-color 0.2s ease-in-out;
   background-color: hsl(6, 63%, 56%);
-}
+} */
 
 #light, :root:has(#light:checked) {
   --clr-bg-main: hsl(0, 0%, 90%);
