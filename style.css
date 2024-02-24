@@ -106,9 +106,8 @@ legend {
 
 .screen {
   justify-content: right;
-  align-items: center;
+  align-items: center; 
 
-  overflow: auto;
   font-size: 2.5rem;
   min-height: 6rem;
   margin-bottom: 1rem;
@@ -150,9 +149,9 @@ legend {
   box-shadow: 0rem 0.25rem 0.125rem 0rem var(--clr-shadow-key);
 }
 
-.key:hover {
+/* .key:hover {
   background-color: hsl(30, 25%, 95%);
-}
+} */
 
 .reset, .equals {
   grid-column: span 2;
