@@ -111,18 +111,19 @@ h1 {
 .screen {
   justify-content: right;
   align-items: center; 
-
+  
   font-size: 2.5rem;
-  min-height: 6rem;
+  max-width: 26.25rem;
   margin-bottom: 1rem;
-
+  
   color: var(--clr-screen);
   border-radius: 0.5rem;
   background-color: var(--clr-bg-screen);
 }
 
 .result {
-  margin-right: 1rem;
+  overflow: auto;
+  margin: 1.75rem 1rem;
 }
 
 /* Keys  */
